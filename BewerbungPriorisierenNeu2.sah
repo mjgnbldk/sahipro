@@ -1,0 +1,24 @@
+_include("../BewerbungPriorisierenNeu2_lib.sah");
+/**
+* Priorisieren($JUsername, $JPassword)
+* @param $JUsername - 
+* @param  $JPassword - 
+*/
+function Priorisieren($JUsername, $JPassword){
+
+	anmelden($JUsername, $JPassword);
+
+	bewerbungPriorisieren();
+
+	verifySpeichern("Die Priorisierung wurde erfolgreich gespeichert.");
+
+	abmelden();
+}
+
+
+/* --Functions Above-- */
+
+Priorisieren("Mujgantest", "EgoBTlQSWloV");
+
+
+

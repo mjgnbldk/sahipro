@@ -1,0 +1,48 @@
+/**
+* anmelden($JUsername, $JPassword)
+* @param $JUsername - 
+* @param  $JPassword - 
+*/
+function anmelden($JUsername, $JPassword){
+	_setValue(_textbox("j_username"), $JUsername);
+	_setPassword(_password("j_password"), $JPassword);
+	_click(_div("button_flexCaptcha"));
+	_click(_submit("Anmelden"));
+}
+
+/**
+* bewerbungPriorisieren()
+*/
+function bewerbungPriorisieren(){
+	_click(_span("Meine Bewerbungen"));
+	_click(_link("Bewerbungen priorisieren"));
+	_click(_image("Eine Stelle nach unten"));
+	_click(_image("Eine Stelle nach unten[3]"));
+	_click(_image("An die letzte Stelle"));
+	_click(_image("An die erste Stelle[17]"));
+	_click(_image("An die letzte Stelle[11]"));
+	_click(_image("An die erste Stelle[12]"));
+	_click(_image("An die erste Stelle[1]"));
+	_click(_image("Eine Stelle nach oben[2]"));
+	_click(_image("Eine Stelle nach oben[16]"));
+	_click(_submit("Speichern"));
+
+}
+
+/**
+* abmelden()
+*/
+function abmelden(){
+	_click(_link("Abmelden"));
+	_click(_link("Zur Anmeldung"));
+}
+
+/**
+* verifySpeichern($DiePriorisierungWurdeErfolgreichGespeichert)
+* @param $DiePriorisierungWurdeErfolgreichGespeichert - 
+*/
+function verifySpeichern($DiePriorisierungWurdeErfolgreichGespeichert){
+	_assertExists(_heading2("Die Priorisierung wurde erfolgreich gespeichert."));
+	_assertVisible(_heading2("Die Priorisierung wurde erfolgreich gespeichert."));
+	_assertEqual($DiePriorisierungWurdeErfolgreichGespeichert, _getText(_heading2("Die Priorisierung wurde erfolgreich gespeichert.")));
+}
