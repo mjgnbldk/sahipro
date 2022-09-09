@@ -1,0 +1,12 @@
+_include("../DevBewerbungPriorisieren_script.sah");
+
+/* --Functions Above-- */
+
+anmelden("testdevtest", "EgoBTlQSWloV");
+
+priorisieren();
+
+speichern();
+
+abmelden();
+

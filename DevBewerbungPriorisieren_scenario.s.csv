@@ -1,0 +1,8 @@
+"TestCase","Key Word","Argument 1","Argument 2"
+,"loadSahi","DevBewerbungPriorisieren_script.sah"
+
+"DEV Priorisierung","[Documentation]","My testcase description. Modify as needed"
+,"anmelden","J Username:testdevtest","J Password:""EgoBTlQSWloV"""
+,"priorisieren"
+,"speichern"
+,"abmelden"
